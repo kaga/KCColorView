@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Od2-cX-zY9">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Color View Controller-->
+        <scene sceneID="2dd-bF-9Xy">
+            <objects>
+                <viewController id="Od2-cX-zY9" customClass="KCColorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IE3-MJ-3h8"/>
+                        <viewControllerLayoutGuide type="bottom" id="1fQ-gA-q9J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u53-Ei-57c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5G-kY-ZNr" customClass="KCColorView">
+                                <rect key="frame" x="35" y="159" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="0Vr-e9-VuO"/>
+                                    <constraint firstAttribute="width" constant="250" id="vpk-2d-KEI"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vi-od-W0g">
+                                <rect key="frame" x="149" y="20" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="AddColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTagButton:" destination="Od2-cX-zY9" eventType="touchUpInside" id="8am-iW-XRI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="7Vi-od-W0g" secondAttribute="centerX" id="1We-jw-lDu"/>
+                            <constraint firstAttribute="centerY" secondItem="n5G-kY-ZNr" secondAttribute="centerY" id="fOO-6h-scW"/>
+                            <constraint firstItem="7Vi-od-W0g" firstAttribute="top" secondItem="u53-Ei-57c" secondAttribute="top" constant="20" id="iai-tH-Dgz"/>
+                            <constraint firstAttribute="centerX" secondItem="n5G-kY-ZNr" secondAttribute="centerX" id="oHY-hd-XVl"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tagView" destination="n5G-kY-ZNr" id="NBx-lh-WrH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VrP-WM-IFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240" y="36"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
